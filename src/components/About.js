@@ -50,7 +50,9 @@ const About = () => {
             </ul>
           </div>
           <div className="info-pic">
-            <a href="" target="blank"></a>
+            <a href="" target="blank">
+              <div className="pic-container"></div>
+            </a>
           </div>
         </div>
       </div>

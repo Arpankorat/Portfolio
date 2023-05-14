@@ -37,6 +37,10 @@ body{
   height: 6vh;
   object-fit: contain;
 }
+.toggle-navbar-icon{
+  display: none;
+}
+
 .right-nav-bar{
   width: 80%;
   justify-content: flex-end;
@@ -57,17 +61,24 @@ body{
   color: #64ffda;
   margin-right: 10px;
 }
-.nav-links li{
+.counter,.links {
+  font-family: SF Mono,Fira Code,Fira Mono,Roboto Mono,Lucida Console,Monaco,monospace
+}
+/* .nav-links li{
   font-size: 13px;
   text-decoration: none;
   color: #ccd6f6;
   margin-right: 25px;
-}
+} */
 .links{
   font-size: 13px;
   text-decoration: none;
   color: #ccd6f6;
   margin-right: 25px;
+  transition: all .25s cubic-bezier(.645,.045,.355,1) 0s
+}
+.links:hover{
+  color: #64ffda;
 }
 .resume-container{
   padding-right: 20px ;
@@ -84,11 +95,96 @@ body{
   border-color: #64ffda;
   padding: .65rem 1.1rem;
   border-radius: 3px;
-  text-decoration: none;      
+  text-decoration: none;
+  background-color: transparent;      
 }
-.resume{
-  background-color: transparent;
-}  
+.resume:hover{
+  background-color: rgba(100,255,218,.2);
+}
+@media only screen and (max-width: 992px) {
+  .contact .about-content .info-text {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width:768px) {
+  .toggle-navbar-icon {
+    display: block;
+    width: 9vh;
+    height: 9vh;
+    z-index: 1000 !important;
+  }
+
+  .hamburger {
+    position: fixed;
+    width: 7vh;
+    height: 9vh;
+    cursor: pointer;
+  }
+
+  .close {
+    position: fixed;
+    width: 5vh;
+    height: 9vh;
+    cursor: pointer;
+  }
+
+  .logo {
+    padding-left: 2vw;
+  }
+
+  .logo-image {
+    height: 8vh;
+    width: 8vh;
+  }
+  .right-nav-bar{
+    display: none;
+  }  
+  .right-nav-bar-toggled {
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(23, 42, 69);
+  box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  .nav-links {
+    flex-direction: column;
+    padding-top: 15vh;
+    height: 70vh;
+    width: 50vw;
+  }
+
+  .nav-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .links {
+    margin: 0;
+  }
+
+  .resume-container {
+    padding-bottom: 10vh;
+    padding-right: 0;
+    margin-top: 15px;
+  }
+
+  .resume {
+    margin-left: 0;
+  }
+}
 .content{
   width: 100%;
   display: flex;
@@ -278,6 +374,30 @@ body{
   justify-content: flex-start;
 }
 
+.pic-container {
+  background-image: url(./assets/profile.jpeg);
+  background-size: 58vh;
+  width: 43vh;
+  height: 43vh;
+  background-color: #64ffda;
+  background-blend-mode: multiply;
+  -webkit-filter: grayscale(40%) contrast(1);
+  filter: grayscale(40%) contrast(1);
+  object-fit: contain;
+}
+.pic-container, .pic-container:hover {
+  max-height: 400px;
+  max-width: 400px;
+  cursor: pointer;
+  transition: all .25s cubic-bezier(.645,.045,.355,1) 0s;
+}
+.pic-container:hover {
+  background-size: 59vh;
+  width: 45vh;
+  height: 45vh;
+  background-color: rgba(100,255,218,0);
+  filter: none
+}
 .experience-content .info-text .company-list {
   width: minmax(20%,25%);
   padding-right: 20px;
@@ -379,4 +499,37 @@ body{
 }
 .link-box{
   margin-top: 80px;
+}
+.footer-container {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-size: 16px;
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(100, 255, 218);
+  color: rgb(10, 25, 47);
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  pointer-events: none;
+}
+.footer-container:hover {
+  background-color: transparent;
+}
+
+.footer-text {
+  text-decoration: none;
+  color: rgb(10, 25, 47);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.footer-container .footer-text{
+  pointer-events:auto;
+}
+
+.footer-text:hover {
+  text-decoration: none;
+  color: rgb(100, 255, 218);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  background-color: transparent;
 }

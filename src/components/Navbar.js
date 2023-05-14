@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.png";
+import menu from '../assets/menu.svg'
+import close from '../assets/close.svg'
 import '@animxyz/core';
 
 const Navbar = () => {
+  const [click,setClicked] = useState(false)
   let initialScrollPosition = 0;
 
   React.useEffect(() => {
@@ -33,13 +36,22 @@ const Navbar = () => {
     }
   };
 
+  const handleClick = () => {
+    console.log('btn click')
+    setClicked(true)
+  }
+
   return (
     <div>
       <nav id="navbar" className="nav-bar xyz-in" xyz="fade big duration-10 stagger-1">
         <a href="/" className="logo">
           <img src={logo} alt="Logo" className="logo-image" />
         </a>
-        <div className="right-nav-bar">
+        <div className="toggle-navbar-icon" onClick={handleClick}>
+          {!click?<img src={menu} className="hamburger" alt="menu" />: <img src={close} className="close" alt="menu-close" />}
+          {/* {click?<img src={close} className="close" alt="menu-close" />:null } */}
+        </div>
+        <div className={!click?"right-nav-bar":"right-nav-bar-toggled"}>
           <ul className="nav-links">
             <li>
               <span className="counter">01.</span>
