@@ -47,9 +47,8 @@ const Navbar = () => {
         <a href="/" className="logo">
           <img src={logo} alt="Logo" className="logo-image" />
         </a>
-        <div className="toggle-navbar-icon" onClick={handleClick}>
-          {!click?<img src={menu} className="hamburger" alt="menu" />: <img src={close} className="close" alt="menu-close" />}
-          {/* {click?<img src={close} className="close" alt="menu-close" />:null } */}
+        <div className="toggle-navbar-icon">
+          {!click?<img src={menu} className="hamburger" alt="menu" onClick={()=>setClicked(!click)} />: <img src={close} className="close" alt="menu-close" onClick={()=>setClicked(!click)}/>}
         </div>
         <div className={!click?"right-nav-bar":"right-nav-bar-toggled"}>
           <ul className="nav-links">
