@@ -1,7 +1,7 @@
 {
   "name": "react-pratice",
   "version": "0.1.0",
-  "homepage": "https://arpankorat.github.io/",
+  "homepage": "https://arpankorat.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "@animxyz/core": "^0.5.0",
