@@ -3,7 +3,17 @@ import React from "react";
 const Project = () => {
   return (
     <div className="project-container">
-      <div id="projects" className="section projects">
+      <div
+        id="projects"
+        className="section projects"
+        data-aos="fade-in"
+        data-aos-offset="100"
+        data-aos-delay="500"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-bottom"
+      >
         <h3 className="section-heading">Some Things I've Built</h3>
         <div className="about-content">
           <div className="info-text">

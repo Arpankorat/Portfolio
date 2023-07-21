@@ -1,22 +1,18 @@
 import React from "react";
-import Intro from "./Intro";
-import About from "./About";
-import Experience from "./Experience";
-import Project from "./Project";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import Intro from "./section/Intro";
+import About from "./section/About";
+import Experience from "./section/Experience";
+import Project from "./section/Project";
+import Contact from "./section/Contact";
 
 const Main_Content = () => {
   return (
-    <div className="main-content">
-      <div className="main-container">
-            <Intro />
-            <About />
-            <Experience />
-            <Project />
-            <Contact />
-            <Footer />
-      </div>
+    <div className="main-container">
+      <Intro />
+      <About />
+      <Experience />
+      <Project />
+      <Contact />
     </div>
   );
 };

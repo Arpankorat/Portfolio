@@ -3,7 +3,17 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="contact-container">
-      <div id="contact" className="section contact">
+      <div
+        id="contact"
+        className="section contact"
+        data-aos="fade-in"
+        data-aos-offset="100"
+        data-aos-delay="500"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div className="section-heading">What's Next?</div>
         <div className="about-content">
           <div className="contact-heading">Get In Touch</div>
