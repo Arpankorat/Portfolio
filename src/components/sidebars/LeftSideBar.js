@@ -1,4 +1,5 @@
 import React from "react";
+import "@animxyz/core";
 
 const socials = [
   {
@@ -30,7 +31,7 @@ export default function LeftSideBar() {
 
   };
   return (
-    <div className="left-side-bar">
+    <div className="left-side-bar xyz-in" xyz="slide left">
       <div className="left-side-bar-container">
         <div className="vertical-sidebar-line" />
         {socials.map((social,index) => {
