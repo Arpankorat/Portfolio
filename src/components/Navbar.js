@@ -66,7 +66,7 @@ const Navbar = () => {
         className="nav-bar xyz-in"
         xyz="slide up duration-10 stagger-1"
       >
-        <a href="/" className="logo">
+        <a href="" className="logo">
           <img src={logo} alt="Logo" className="logo-image" />
         </a>
         <div className="toggle-navbar-icon">
