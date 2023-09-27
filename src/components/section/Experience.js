@@ -3,13 +3,28 @@ import React, { useState } from "react";
 // const data = {
 const compnies = [
   {
+    name: "Mastek",
+    description: {
+      position: "Consultant l Technical",
+      companyName: "Mastek Limited",
+      link: "https://www.mastek.com/",
+      startDate: "July 2023",
+      lastDate: "Present",
+      details: [
+        "Developed highly interactive and user-friendly mobile application for client using React Native ecosystem",
+        "Participated in design discussions regarding application architecture, feature implementation, or any other relevant topic as required",
+        "Utilized React Native debugging tool to identify and fix bugs.",
+      ],
+    },
+  },
+  {
     name: "Capgemini",
     description: {
       position: "Associate Consultant",
       companyName: "Capgemini Technology Services India Limited",
       link: "https://www.capgemini.com/in-en/",
       startDate: "April 2021",
-      lastDate: "Present",
+      lastDate: "June 2023",
       details: [
         "Developed and Shipped highly interactive cross-platform mobile application for client using React Native ecosystem",
         "Participated in design discussions regarding application architecture, feature implementation, or any other relevant topic as required",
