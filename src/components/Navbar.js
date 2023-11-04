@@ -105,10 +105,10 @@ const Navbar = () => {
           </ol>
           <div className="resume-container">
             <a
-              href="https://drive.google.com/file/d/1NS7mLsVLiOKux2mwSYT3hLZltr7noH1N/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1NRbqhnlidEKIS6uvoAixAf09uv75vUZX/view?usp=drive_link"
               target="blank"
               className="resume"
-              onClick={() => setClicked(!click)}
+              onClick={() => window.screen.width< 768 ? setClicked(!click): null}
             >
               Resume
             </a>
